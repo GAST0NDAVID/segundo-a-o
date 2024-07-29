@@ -1,0 +1,272 @@
+body {
+    color: black;
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/claro.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-image: url('/img/fondo.jpg');
+    color: white;
+}
+
+body.dark-mode .menu a,
+body.dark-mode .texto_menu a {
+    color: white;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    padding: 10px 20px;
+}
+
+.menu .logo img {
+    width: 50px;
+    height: auto;
+}
+
+.menu nav {
+    display: flex;
+    gap: 20px;
+}
+
+.menu nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.menu nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.menu nav .boton {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 20px;
+    border-radius: 15px;
+    font-size: 1rem;
+    color: white;
+
+}
+
+.texto_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.texto_menu .texto {
+    flex: 1;  /* Ocupa todo el espacio disponible */
+    margin: 0 0 0 80px;
+    max-width: 30%;
+}
+
+.texto_menu .texto h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.texto_menu .texto p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.texto_menu .imagen {
+    flex: 1;
+    max-width: 35%;
+    margin: 0 80px 0 0;
+    text-align: right;
+}
+
+.texto_menu .imagen img {
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.contenedor {
+    width: 80%;
+    background: rgba(255, 255, 255, 0.1); /* Fondo blanco con 50% de opacidad */
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1200px;
+    margin: 10rem auto;
+}
+
+.contenedor .info {
+    padding: 30px 0;
+    flex: 1;
+/*   margin: 0 0 0 80px;*/
+    max-width: 35%;
+}
+
+.contenedor .info h1 {
+    font-size: 1.7rem;
+}
+
+.contenedor .info p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.contenedor .c_imagen {
+    padding: 30px 0;
+    flex: 1;
+    max-width: 60%;
+    text-align: right;
+}
+
+.contenedor .c_imagen img {
+    border-radius: 25px;
+    max-width: 100%;
+    height: auto;
+}
+
+.fin {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem auto;
+    text-align: center;
+}
+
+.centrar_fin {
+    display: inline-block;
+    text-align: center;
+}
+
+.centrar_fin h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 0 3.5rem 0;
+    padding: 0;
+}
+
+.centrar_fin a {
+    font-size: 1.3rem;
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: white;
+    background-color: slateblue;
+    text-decoration: none;
+}
+hr {
+    width: 90%;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    padding: 10px 50px;
+}
+
+.icon {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+footer a {
+    color: white;
+    margin: 0;
+}
+
+/*formularios*/
+
+.titulo, p {
+    text-align: center;
+}
+/* login y registro */
+input[type="text"], input[type="password"] {
+    outline: none;
+    padding: 20px;
+    display: block;
+    width: 300px;
+    border: 4px solid #eee ;
+    margin: 20px auto;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    color: white;
+    background-color: #0098cb;
+    width: 320px;
+    margin: 0 24rem;
+    border: 0;   
+}
+
+input[type="submit"]:hover {
+    background-color: #00b8cb;
+}
+
+
+/* Media Queries para la responsividad */
+@media (max-width: 768px) {
+    .texto_menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texto_menu .texto , .texto_menu .imagen {
+        max-width: 100%;
+        margin: 0 10%;
+    }
+
+
+
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor .info,
+    .contenedor .c_imagen {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .contenedor .c_imagen {
+        order: -1; /* Mueve la imagen arriba en dispositivos pequeños */
+    }
+
+    .fin {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer a {
+        margin-top: 10px;
+    }
+}
